@@ -8,7 +8,7 @@ body {
 
 header {
     margin-bottom: 2em;
-    padding: 2em; 
+    padding: 2em;
     background-color: #c9bddd;
 }
 
@@ -22,6 +22,8 @@ main {
 
 footer {
     margin-top: 2em;
+    padding-top: 2em;
+    padding-bottom: 0.2em; 
     background-color: white;
     text-align: center;
 }
