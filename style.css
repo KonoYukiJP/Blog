@@ -32,6 +32,10 @@ footer a {
     display: inline-block;
 }
 
+nav{
+    color: gray;
+}
+
 h1 {
     width: 80%;
     max-width: 800px;
@@ -39,10 +43,30 @@ h1 {
     color: white;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 img {
     width: 44px;
     height: 44px;
     padding: 8px;
+}
+
+.card {
+    width: 360px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    margin: 8px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.card img {
+    width: 360px;
+    height: 202.5px;
+    object-fit: contain;
 }
 
 .argument {

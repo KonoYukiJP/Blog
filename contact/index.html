@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>お問い合わせ - こゆ記録</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div id="header"></div>
+
+    <main>
+        <h2>お問い合わせ</h2>
+        <p>以下のフォームにご記入ください。内容を確認後、できるだけ早く返信いたします。</p>
+        <form action="/send.php" method="post">
+            <label>名前: <input type="text" name="name" required></label><br>
+            <label>メールアドレス: <input type="email" name="email" required></label><br>
+            <label>メッセージ:<br><textarea name="message" rows="6" required></textarea></label><br>
+            <button type="submit">送信</button>
+        </form>
+    </main>
+
+    <div id="footer"></div>
+
+    <script>
+        fetch("/header.html")
+            .then(res => res.text())
+            .then(html => document.getElementById("header").innerHTML = html);
+        fetch("/footer.html")
+            .then(res => res.text())
+            .then(html => document.getElementById("footer").innerHTML = html);
+    </script>
+</body>
+</html>
