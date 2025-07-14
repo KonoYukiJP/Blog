@@ -3,17 +3,31 @@
 body {
     margin: 0;
     font-family: Verdana, "Hiragino Sans", 'Noto Sans JP', sans-serif;
+    background-color: #dfe4e7;
 }
 
 header {
+    margin-bottom: 2em;
     padding: 2em; 
-    background-color: #ff00a0;
+    background-color: #c9bddd;
 }
 
 main {
     width: 80%;
     max-width: 800px;
-    margin: 0 auto;
+    margin: 2em auto;
+    padding: 16px;
+    background-color: white;
+}
+
+footer {
+    margin-top: 2em;
+    background-color: white;
+    text-align: center;
+}
+
+footer a {
+    display: inline-block;
 }
 
 h1 {
@@ -27,4 +41,11 @@ img {
     width: 44px;
     height: 44px;
     padding: 8px;
+}
+
+.argument {
+    color: white;
+    background-color: lightgray;
+    padding: 0.2em;
+    border-radius: 4px;
 }

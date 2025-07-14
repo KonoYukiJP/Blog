@@ -2,35 +2,36 @@
 <html lang="ja">
     <head>
         <meta charset="UTF-8">
-        <title>Yuki Kono</title>
+        <title>こゆ記録</title>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="/style.css">
     </head>
 </html>
 <body>
-    <header>
-        <h1>Portfolio</h1>
-    </header>
+    <div id="header"></div>
     
     <main>
         <h2>Profile</h2>
         <h3>こゆ</h3>
         <p>プログラミングします。</p>
 
-        <h2>Work</h2>
+        <h2>Works</h2>
         <ul>
-            <li><a href="web/index.html">HTML</a></li>
-            <li><a href="linux/index.html">Linux</a></li>
+            <li><a href="mac">Mac</a></li>
+            <li><a href="web">HTML</a></li>
             <li><a href="https://winesystem.servehttp.com/chat/">チャット</a></li>
         </ul>
     </main>
 
-    <footer>
-        <a href="https://www.instagram.com/koyu_jpn?igsh=MW1wdXdmbGZzYWJtZw%3D%3D&utm_source=qr" target="_blank">
-            <img src=Images/instagram.svg alt="Instagram">
-        </a>
-        <a href="https://github.com/KonoYukiJP" target="_blank">
-            <img src=Images/github.svg alt=GitHub>
-        </a>
-    </footer>
+    <div id="footer"></div>
+
+    <script>
+        fetch("/header.html")
+        .then(res => res.text())
+        .then(html => document.getElementById("header").innerHTML = html);
+
+        fetch("/footer.html")
+        .then(res => res.text())
+        .then(html => document.getElementById("footer").innerHTML = html);
+    </script>
 </body>
