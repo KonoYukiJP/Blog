@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>サイトマップ - こゆ記録</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div id="header"></div>
+
+    <main>
+        <h2>サイトマップ</h2>
+    </main>
+
+    <div id="footer"></div>
+
+    <script>
+        fetch("/header.html")
+            .then(res => res.text())
+            .then(html => document.getElementById("header").innerHTML = html);
+        fetch("/footer.html")
+            .then(res => res.text())
+            .then(html => document.getElementById("footer").innerHTML = html);
+    </script>
+</body>
+</html>
