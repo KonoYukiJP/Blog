@@ -10,11 +10,19 @@
 
     <main>
         <h2>お問い合わせ</h2>
-        <p>以下のフォームにご記入ください。内容を確認後、できるだけ早く返信いたします。</p>
         <form action="/send.php" method="post">
-            <label>名前: <input type="text" name="name" required></label><br>
-            <label>メールアドレス: <input type="email" name="email" required></label><br>
-            <label>メッセージ:<br><textarea name="message" rows="6" required></textarea></label><br>
+            <div class="section">
+                <label>お名前</label><br>
+                <input type="text" name="name" placeholder="お名前" required><br>
+            </div>
+            <div class="section">
+                <label>メールアドレス</label><br>
+                <input type="email" name="email" placeholder="メールアドレス" required><br>
+            </div>
+            <div class="section">
+                <label>内容<br>
+                <textarea name="message" rows="6" placeholder="内容" required></textarea></label><br>
+            </div>
             <button type="submit">送信</button>
         </form>
     </main>
