@@ -26,18 +26,18 @@ try {
 
     // 送信元と宛先
     $mail->setFrom('konoyuki.jp@gmail.com', 'こゆ記録');
-    $mail->addAddress('konoyuki.jp@gmail.com');
+    $mail->addAddress('koyu_var@icloud.com');
 
     // 文字エンコーディング
     $mail->CharSet = 'UTF-8';
 
-    // フォームからのデータを取得
+    // フォームからのデータ取得
     $name = htmlspecialchars($_POST['name'] ?? '');
     $email = htmlspecialchars($_POST['email'] ?? '');
     $message = htmlspecialchars($_POST['message'] ?? '');
 
-    $mail->Subject = '【こゆ記録】お問い合わせがありました';
-    $mail->Body    = "名前: {$name}\nメール: {$email}\n\n内容:\n{$message}";
+    $mail->Subject = '「こゆ記録」お問い合わせ';
+    $mail->Body    = "お名前: {$name}\nメール: {$email}\n\n内容:\n{$message}";
 
     $mail->send();
     header('Location: /contact/thanks.html');

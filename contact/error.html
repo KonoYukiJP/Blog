@@ -6,10 +6,24 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
+    <div id="header"></div>
+
     <main>
-        <h1>送信に失敗しました</h1>
+        <h2>送信に失敗しました</h2>
         <p>お手数ですが、しばらくしてから再度お試しください。</p>
-        <p><a href="/contact/">お問い合わせフォームに戻る</a></p>
+        <p><a href="/">トップに戻る</a></p>
     </main>
+
+    <div id="footer"></div>
+
+    <script>
+        fetch("/header.html")
+        .then(res => res.text())
+        .then(html => document.getElementById("header").innerHTML = html);
+
+        fetch("/footer.html")
+        .then(res => res.text())
+        .then(html => document.getElementById("footer").innerHTML = html);
+    </script>
 </body>
 </html>
