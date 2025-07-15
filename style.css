@@ -23,13 +23,9 @@ main {
 footer {
     margin-top: 2em;
     padding-top: 2em;
-    padding-bottom: 0.2em; 
+    padding-bottom: 1em; 
     background-color: white;
     text-align: center;
-}
-
-footer a {
-    display: inline-block;
 }
 footer a:hover {
     text-decoration: underline;
