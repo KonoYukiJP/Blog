@@ -1,15 +1,25 @@
 /* style.css */
 
+:root {
+    --primary: #c9bddd;
+    --secondary: #dfe4e7;
+    --text: black;
+    --secondary-text: gray;
+    --dark-text: white;
+    --argument-background: lightgray;
+    --background: white;
+}
+
 body {
     margin: 0;
     font-family: Verdana, "Hiragino Sans", 'Noto Sans JP', sans-serif;
-    background-color: #dfe4e7;
+    background-color: var(--secondary);
 }
 
 header {
     margin-bottom: 2em;
     padding: 2em;
-    background-color: #c9bddd;
+    background-color: var(--primary);
 }
 
 main {
@@ -17,14 +27,14 @@ main {
     max-width: 800px;
     margin: 2em auto;
     padding: 16px;
-    background-color: white;
+    background-color: var(--background);
 }
 
 footer {
     margin-top: 2em;
     padding-top: 2em;
     padding-bottom: 1em; 
-    background-color: white;
+    background-color: var(--background);
     text-align: center;
 }
 footer a:hover {
@@ -32,18 +42,21 @@ footer a:hover {
 }
 
 nav{
-    color: gray;
+    color: var(--secondary-text);
 }
 
 h1 {
     width: 80%;
     max-width: 800px;
     margin: 0 auto;
-    color: white;
+    color: var(--dark-text);
+}
+
+code {
+    font-family: Menlo, Consolas, monospace;
 }
 
 a {
-    display: inline-block;
     text-decoration: none;
     color: inherit;
 }
@@ -58,8 +71,8 @@ button {
     border: none;
     padding: 0.5em 1em;
     font-size: 1em;
-    color: white;
-    background-color: #c9bddd;
+    color: var(--dark-text);
+    background-color: var(--primary);
 }
 
 input {
@@ -84,23 +97,38 @@ textarea {
 
 .card {
     width: 360px;
+    margin: 8px;
     border: 2px solid #ccc;
     border-radius: 8px;
-    margin: 8px;
-    overflow: hidden;
     text-align: center;
+    overflow: hidden;
 }
-
 .card img {
     width: 360px;
     height: 202.5px;
     object-fit: contain;
 }
 
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.cell {
+    height: 60px;
+    border: 2px solid var(--secondary);
+    box-sizing: border-box;
+    padding: 8px;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
 .argument {
-    color: white;
-    background-color: lightgray;
+    color: var(--dark-text);
+    background-color: var(--argument-background);
     padding: 0.2em;
     border-radius: 4px;
 }
+
 
