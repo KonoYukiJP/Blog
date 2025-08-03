@@ -2,46 +2,37 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>HTMLの基本</title>
+    <title>HTML - Web - KoyuBlog</title>
     <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/normalize-whitespace/prism-normalize-whitespace.min.js"></script>
 </head>
 <body>
     <div id="header"></div>
 
     <main>
         <nav>
-            <a href="/">Top</a> &gt; <a href="/web/">Web</a>
+            <a href="/">Top</a> &gt; <a href="/web/">Web</a> &gt;
         </nav>
         <h2>HTML</h2>
-        <h3><code>&lt;!DOCTYPE html&gt;</code></h3>
-        <ul class="list">
-            <li>
-                <code>&lt;html lang=<span class="argument">langage</span>&gt;&lt;/html&gt;</code><br>
-            </li>
-            
-        </ul>
-        <h3><code>&lt;html lang=<span class="argument">langage</span>&gt;&lt;/html&gt;</code><br></h3>
-        <span class="argument">langage</span>: "ja", "en"
-        <ul class="list">
-            <li>
-                <code>&lt;head&gt;&lt;/head&gt;</code>
-            </li>
-            <li>
-                <code>&lt;body&gt;&lt;/body&gt;</code>
-            </li>
-        </ul>
-        <h3><code>&lt;head&gt;&lt;/head&gt;</code></h3>
-        <ul class="list">
-            <li>
-                &lt;meta charset="UTF-8"&gt;
-            </li>
-        </ul>    
-        
-        <h3><code>&lt;body&gt;&lt;/body&gt;</code></h3>
+
+        <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=langage&gt;&lt;/html&gt;
+&lt;html lang=langage&gt;&lt;/html&gt;
+</code></pre>
 
     </main>
 
     <div id="footer"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('code').forEach((el) => {
+            hljs.highlightElement(el);
+            });
+        });
+    </script>
 
     <script>
         fetch("/header.html")
