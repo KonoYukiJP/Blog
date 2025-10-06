@@ -16,6 +16,13 @@ body {
     background-color: var(--secondary);
 }
 
+@media screen and (max-width: 768px) {
+    body {
+        background: #f8f8f8;
+        font-size: 16px;
+    }
+}
+
 header {
     margin-bottom: 2em;
     padding: 2em;
