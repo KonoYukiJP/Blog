@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML - Web - KoyuBlog</title>
+    <link rel="icon", href="/favicon.png">
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
@@ -14,16 +15,30 @@
 
     <main>
         <nav>
-            <a href="/">Top</a> &gt; <a href="/web/">Web</a> &gt;
+            <a href="/">Top</a> &gt;
         </nav>
         <h2>HTML</h2>
 
-        <pre><code class="language-html">&lt;!DOCTYPE html&gt;
-&lt;html lang=langage&gt;&lt;/html&gt;
+        <pre><code class="language-html">&lt;!DOCTYPE html&gt;</code></pre>
+        <p>Document Type - 文書型宣言</p>
 
-</code></pre>
+        <pre><code class="language-html">&lt;html lang=""&gt;&lt;/html&gt;</code></pre>
+        <p>HTML文書 言語<br>lang: ja, en</p>
 
-<p>まだ途中</p>
+        <pre><code class="language-html">&lt;head&gt;&lt;/head&gt;</code></pre>
+        <p>頭の部分 - メタ情報</p>
+
+        <pre><code class="language-html">&lt;meta charset=""&gt;</code></pre>
+        <p>character set - 文字コード設定<br>charset: UTF-8  </p>
+
+        <pre><code class="language-html">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></pre>
+        <p>表示領域設定</p>
+
+        <pre><code>&lt;title&gt;&lt;/title&gt;</code></pre>
+        <p>タイトル</p>
+
+        <pre><code>&lt;link rel="" href=""&gt;</code></pre>
+        <p>relation, hyperlink reference - 外部リソース結びつけ<br>rel: stylesheet, icon<br>href: style.css, favicon.ico, favicon.png</p>
     </main>
 
     <div id="footer"></div>
