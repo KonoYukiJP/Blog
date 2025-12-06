@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypeScriptインストール - KoyuBlog</title>
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+</head>
+<body>
+    <div id="header"></div>
+    <main>
+        <nav><a href = "/">Top</a> &gt;</nav>
+        <h2>TypeScript Compiler</h2>
+        <aside>Created at 2025-12-5 Modified at 2025-12-6</aside>
+
+        <h3>1. Node.js - Node Package Manager(npm)インストール</h3>
+        <p><a href="https://nodejs.org/ja/">Node.js公式ウェブサイト</a>からNode.jsを入手。</p>
+        <h3>2. TypeScript Compiler インストール</h3>
+        <h4>· グローバル</h4>
+        <pre><code>sudo npm install -g typescript</code></pre>
+        <h4>· ローカル</h4>
+        <pre><code>npm install -save-dev typescript</code></pre>
+        <h3>3. TypeScript Compiler(tsc)バージョン確認</h3>
+        <h4>· グローバル</h4>
+        <pre><code>tsc -v</code></pre>
+        <h4>· ローカル</h4>
+        <pre><code>./node_modules/.bin/tsc -v</code></pre>
+        <h3>4. オプションファイル(tsconfig.json)作成</h3>
+        <h4>· グローバル</h4>
+        <pre><code>tsc -init</code></pre>
+        <h4>· ローカル</h4>
+        <pre><code>./node_modules/.bin/tsc -init</code></pre>
+        <h3>5. tsconfig.json</h3>
+<pre><code>{
+  "compilerOptions": {
+    "rootDir": "./source",
+    "outDir": "./distribution",
+    "module": "ES6",
+    "target": "ES6",
+    "strict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": [
+    "source/**/*"
+  ]
+}</code></pre>
+        <h3>6. コンパイル</h3>
+        <h4>グローバル</h4>
+        <pre><code>tsc</code></pre>
+        <h4>ローカル</h4>
+        <pre><code>./node_modules/.bin/tsc</code></pre>
+        <h3>参考</h3>
+        <p><a href="https://qiita.com/skytomo221/items/d595e3208d97ac64bb6b">JavaScriptを知らない人のためのTypeScript入門 #初心者 - Qiita</a></p>
+        <p><a href="https://qiita.com/EBIHARA_kenji/items/31b7c1c62426bdabd263">TypeScript チュートリアル #JavaScript - Qiita</a></p>
+    </main>
+    <div id="footer"></div>
+
+    <script>
+        fetch("/header.html")
+        .then(res => res.text())
+        .then(html => document.getElementById("header").innerHTML = html);
+
+        fetch("/footer.html")
+        .then(res => res.text())
+        .then(html => document.getElementById("footer").innerHTML = html);
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('code').forEach((el) => {
+            hljs.highlightElement(el);
+            });
+        });
+    </script>
+</body>
+</html>
